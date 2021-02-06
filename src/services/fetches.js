@@ -1,27 +1,27 @@
 import request from 'superagent';
 
-export async function fetchPost(URL) {
+export async function fetchPost(url) {
   const res = await request
-    .get(`${URL}`);
+    .get(`${url}`);
   return res.body;
 }
 
-export async function createPost(URL, JSON) {
+export async function createPost(url, json) {
   const res = await request
-    .post(`${URL}`)
-    .send(JSON);
+    .post(`${url}`)
+    .send(json);
   return res.body;
 }
 
-export async function updatePost(URL, JSON) {
+export async function updatePost(url, json) {
   const res = await request
-    .put(`${URL}`)
-    .send(`${JSON}`);
+    .put(`${url}`)
+    .send(`${json}`);
   return res.body;
 }
 
-export async function deletePost(URL) {
+export async function deletePost(url) {
   const res = await request
-    .delete(`${URL}`);
+    .delete(`${url}`);
   return res.body;
 }

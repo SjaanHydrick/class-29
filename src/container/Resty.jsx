@@ -23,6 +23,7 @@ export default class Resty extends Component {
 
     handleClick = async(e) => {
       e.preventDefault();
+
       const { url, method, json } = this.state;
 
       if(method === 'get') {

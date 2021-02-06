@@ -5,12 +5,12 @@ const Input = ({ handleInput, handleClick }) => (
   <form onSubmit={handleClick}>
     <p>API URL</p>
     <input
-      name="URL"
+      name="url"
       type="text"
       onChange={handleInput}
     />
 
-    <p>GET</p>
+    <span>GET</span>
     <input
       name="method"
       type="radio"
@@ -19,7 +19,7 @@ const Input = ({ handleInput, handleClick }) => (
       onChange={handleInput}
     />
 
-    <p>POST</p>
+    <span>POST</span>
     <input
       name="method"
       type="radio"
@@ -27,7 +27,7 @@ const Input = ({ handleInput, handleClick }) => (
       onChange={handleInput}
     />
 
-    <p>PUT</p>
+    <span>PUT</span>
     <input
       name="method"
       type="radio"
@@ -35,7 +35,7 @@ const Input = ({ handleInput, handleClick }) => (
       onChange={handleInput}
     />
 
-    <p>DELETE</p>
+    <span>DELETE</span>
     <input
       name="method"
       type="radio"

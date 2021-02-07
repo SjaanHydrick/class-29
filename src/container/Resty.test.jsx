@@ -53,4 +53,31 @@ describe('CRUD routes', () => {
       expect(display).toHaveTextContent('"userId":2, "title":"asdf", "body":"asdff", "id":101');
     });
   });
+
+  it('updates an item', () => {
+    render(<Resty />);
+      
+    const display = screen.getByTestId('display');
+    const url = screen.getByTestId('url');
+    const method = screen.getByLabelText('PUT');
+    const json = screen.getByPlaceholderText('POST/PUT Request...');
+    const submit = screen.getByText('Submit');
+    fireEvent.change(url, {
+      target: {
+        value: 'https://jsonplaceholder.typicode.com/posts/1'
+      }
+    }); 
+    fireEvent.change(json, {
+      target: {
+        value: '{"userId":2,"title":"asdf","body":"asdff"}'
+      }
+    });
+
+    fireEvent.click(method);
+    fireEvent.submit(submit);
+
+    return waitFor(() => {
+      expect(display).toHaveTextContent('"userId":2, "title":"asdf", "body":"asdff", "id":1');
+    });
+  });
 });

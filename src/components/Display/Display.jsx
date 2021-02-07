@@ -10,6 +10,7 @@ const Display = ({ received, handleInput, handleClick }) => (
       handleClick={handleClick}
     />
     <p 
+      data-testId="display"
       className={styles.received}>{received}</p>
   </div>
 );

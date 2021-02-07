@@ -2,8 +2,74 @@
 
 exports[`App component renders App 1`] = `
 <DocumentFragment>
-  <h1>
-    Hello World
-  </h1>
+  <div>
+    <div>
+      <h1>
+        RESTy
+      </h1>
+    </div>
+    <div>
+      <form>
+        <span
+          class="api"
+        >
+          API URL:
+        </span>
+        <input
+          class="apiInput"
+          data-testid="url"
+          name="url"
+          type="text"
+        />
+        <br />
+        <label>
+          GET
+          <input
+            name="method"
+            type="radio"
+            value="get"
+          />
+        </label>
+        <label>
+          POST
+          <input
+            name="method"
+            type="radio"
+            value="post"
+          />
+        </label>
+        <label>
+          PUT
+          <input
+            name="method"
+            type="radio"
+            value="put"
+          />
+        </label>
+        <label>
+          DELETE
+          <input
+            name="method"
+            type="radio"
+            value="delete"
+          />
+        </label>
+        <input
+          class="json"
+          name="json"
+          placeholder="POST/PUT Request..."
+          type="text"
+        />
+        <br />
+        <button>
+          Submit
+        </button>
+      </form>
+      <p
+        class="received"
+        data-testid="display"
+      />
+    </div>
+  </div>
 </DocumentFragment>
 `;

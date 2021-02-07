@@ -6,6 +6,7 @@ const Input = ({ handleInput, handleClick }) => (
   <form onSubmit={handleClick}>
     <span className={styles.api}>API URL:</span>
     <input
+      data-testid="url"
       className={styles.apiInput}
       name="url"
       type="text"
@@ -13,7 +14,7 @@ const Input = ({ handleInput, handleClick }) => (
     />
     <br />
     <label>
-      <span className={styles.get}>GET</span>
+      GET
       <input
         name="method"
         type="radio"
@@ -23,7 +24,7 @@ const Input = ({ handleInput, handleClick }) => (
     </label>
 
     <label>
-      <span className={styles.post}>POST</span>
+      POST
       <input
         name="method"
         type="radio"
@@ -33,7 +34,7 @@ const Input = ({ handleInput, handleClick }) => (
     </label>
 
     <label>
-      <span className={styles.put}>PUT</span>
+      PUT
       <input
         name="method"
         type="radio"
@@ -43,7 +44,7 @@ const Input = ({ handleInput, handleClick }) => (
     </label>
 
     <label>
-      <span className={styles.delete}>DELETE</span>
+      DELETE
       <input
         name="method"
         type="radio"

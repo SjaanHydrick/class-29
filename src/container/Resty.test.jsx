@@ -80,4 +80,25 @@ describe('CRUD routes', () => {
       expect(display).toHaveTextContent('"userId":2, "title":"asdf", "body":"asdff", "id":1');
     });
   });
+
+  it('deletes an item', () => {
+    render(<Resty />);
+      
+    const display = screen.getByTestId('display');
+    const url = screen.getByTestId('url');
+    const method = screen.getByLabelText('DELETE');
+    const submit = screen.getByText('Submit');
+    fireEvent.change(url, {
+      target: {
+        value: 'https://jsonplaceholder.typicode.com/posts/1'
+      }
+    }); 
+   
+    fireEvent.click(method);
+    fireEvent.submit(submit);
+
+    return waitFor(() => {
+      expect(display).toHaveTextContent('{ }');
+    });
+  });
 });

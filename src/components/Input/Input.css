@@ -1,0 +1,29 @@
+.api {
+    margin-right: 1%;
+}
+
+.apiInput {
+    width: 30%;
+    margin-bottom: 1%;
+    border: solid 1px darkgreen;
+    border-radius: 5px;
+}
+
+input[type="radio"] {
+    margin-right: 2%;
+    margin-bottom: 2%;
+}
+
+.json {
+    width: 20%;
+    border: solid 1px darkgreen;
+    border-radius: 5px;
+}
+
+button {
+    background-color: darkgreen;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}

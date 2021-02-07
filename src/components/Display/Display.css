@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    background-color: honeydew;
+    text-align: center;
+}
+
+.received {
+    display: block;
+    width: 60%;
+    height: 450px;
+    overflow-y: auto;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border: solid 2px darkgreen;
+    border-radius: 10px;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11pt;
+    text-align: left;
+    white-space: pre-line;
+}

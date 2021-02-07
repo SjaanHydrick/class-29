@@ -16,7 +16,7 @@ export async function createPost(url, json) {
 export async function updatePost(url, json) {
   const res = await request
     .put(`${url}`)
-    .send(`${json}`);
+    .send(json);
   return res.body;
 }
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Input from './Input';
+import Input from '../Input/Input';
+import styles from './Display.css';
 
 const Display = ({ received, handleInput, handleClick }) => (
   <div>
@@ -8,7 +9,8 @@ const Display = ({ received, handleInput, handleClick }) => (
       handleInput={handleInput}
       handleClick={handleClick}
     />
-    <p>{received}</p>
+    <p 
+      className={styles.received}>{received}</p>
   </div>
 );
 
